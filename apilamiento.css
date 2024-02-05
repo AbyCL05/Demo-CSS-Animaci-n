@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    counter-reset: score;
+}
+.container {
+    width: 350px;
+    height: 650px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: rgb(140,191,238);
+    background: linear-gradient(180deg, rgba(140,191,238,1) 0%, rgba(187,201,228,1) 25%, rgba(223,213,133,1) 42%, rgba(226,120,8,1) 78%, rgba(249,196,3,1) 100%);
+    position: relative;
+    overflow-y: hidden;
+}
+.layer-1 {
+    position: absolute;
+    width: 80px;
+    height:  450px;
+    z-index: 1;
+    bottom: 0;
+    right: 70px;
+    border-radius: 50px 50px 0 0;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.layer-2 {
+    position: absolute;
+    width: 80px;
+    height:  450px;
+    z-index: 1;
+    bottom: 0;
+    left: 70px;
+    border-radius: 50px 50px 0 0;
+    animation-name: layer;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    width: 250px;
+    height: 400px;
+    background-color: rgb(141, 108, 43);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 30px 30px 0 0;
+
+    box-shadow:inset 10px 10px  8px rgb(121, 91, 30);
+}
+.layer-4 {
+    position: absolute;
+    z-index: 4;
+    width: 80px;
+    height:  350px;
+    bottom: 0;
+    left: 30px;
+    border-radius: 50px 50px 0 0;
+    animation-name: layer;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.layer-5 {
+    position: absolute;
+    z-index: 5;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(184, 122, 52);
+    bottom: 0;
+    left: 0;
+    border-radius: 30px 30px 0 0;
+
+    box-shadow:inset 10px 10px  8px rgb(148, 104, 54);
+}
+.layer-6 {
+    position: absolute;
+    z-index: 6;
+    width: 80px;
+    height:  250px;
+    bottom: 0;
+    right: 30px;
+    border-radius: 50px 50px 0 0;
+    animation-name: layer;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.layer-7 {
+    position: absolute;
+    z-index: 7;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(148, 93, 30);
+    bottom: 0;
+    right: 0;
+    border-radius: 30px 30px 0 0;
+
+    box-shadow:inset 10px 10px  8px rgb(132, 86, 32);
+}
+.layer-8 {
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(24, 108, 18);
+    bottom: 0;
+    border-radius: 50% 50% 0 0 ;
+
+    box-shadow:inset 10px 10px  10px rgb(28, 78, 25);
+}
+.layer-9 {
+    position: absolute;
+    z-index: 9;
+    width: 120px;
+    height: 120px;
+    bottom: 0;
+    background-color: rgb(31, 119, 21);
+    border-radius: 50% 50% 0 0 ;
+
+    box-shadow:inset 0 -10px  8px rgb(33, 98, 26),inset 20px 20px  15px rgb(33, 98, 26);
+}
+.layer-10 {
+    position: absolute;
+    z-index: 10;
+    width: 120px;
+    height: 120px;
+    bottom: 0;
+    background-color: rgb(31, 119, 21);
+    right: 0;
+    border-radius: 50% 50% 0 0 ;
+
+    box-shadow:inset -10px -15px  15px rgb(33, 98, 26),inset 0 20px  15px rgb(33, 98, 26);
+}
+.layer-11{
+    position: absolute;
+    z-index: 8;
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    left: 60px;
+    background-color: rgb(31, 119, 21);
+    border-radius: 0 50% 50%0 ;
+
+    box-shadow:inset -30px -10px  15px rgb(33, 98, 26);
+}
+.layer-12{
+    position: absolute;
+    z-index: 9;
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    right: 60px;
+    background-color: rgb(31, 119, 21);
+    border-radius: 50% 0 0 50% ;
+
+    box-shadow:inset 30px 0  15px rgb(33, 98, 26);
+}
+
+/*Panda*/
+
+.head-panda {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    top: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.left__ear--outer-panda {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+}
+.right__ear--outer-panda {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    right:-5px;
+    top: 8px;
+}
+.head__eye-panda {
+    width: 20px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+}
+.head__eye--left-panda {
+    left: 15px;
+}
+.left__eye--inner-panda {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    position: absolute;
+    left: 8px;
+    top: 2px;
+}
+.head__eye--right-panda {
+    right: 15px;
+}
+.right__eye--inner-panda {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    position: absolute;
+    right: 8px;
+    top: 2px;
+}
+.eye--inner {
+    animation-name: flicker;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.snout-panda {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    left: 31px;
+    top: 25px;
+    border-radius: 50%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/*Keyframes*/
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(0.9);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+@keyframes layer {
+    0% {
+        transform: translate(0)
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translate(0)
+    }
+}
+
+/*inputs*/
+
+input[type=checkbox] {
+    appearance: none;
+    height: 50px;
+    width: 80px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    z-index: 2;
+}
+input[type=chekbox] {
+    appearance: none;
+    outline: none;
+}
+input:checked {
+    counter-increment: score;
+}
+.score::after {
+    content: counter(score);
+}
+
+/*Contador*/
+
+.score {
+    width: auto;
+    height: 150px;
+    font-size: 24px;
+    font-family: 'Bruno Ace', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
