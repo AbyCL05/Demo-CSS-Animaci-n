@@ -15,6 +15,7 @@ body {
 .container {
     width: 350px;
     height: 650px;
+    min-width: 310px;
     border: 3px solid black;
     border-radius: 10px;
     background: rgb(140,191,238);
@@ -277,6 +278,12 @@ body {
     }
 }
 
+@media (max-width: 320px) {
+    .container {
+        width: calc(100% - 10px);
+    }
+}
+
 /*inputs*/
 
 input[type=checkbox] {
@@ -292,12 +299,15 @@ input[type=chekbox] {
     appearance: none;
     outline: none;
 }
-input:checked {
+/* input:checked {
     counter-increment: score;
 }
 .score::after {
     content: counter(score);
-}
+} */
+/* .score {
+    counter-set: score initial;
+} */
 
 /*Contador*/
 
@@ -309,4 +319,25 @@ input:checked {
     display: flex;
     flex-wrap: wrap;
     place-content: center;
+}
+
+.counter-reset {
+    animation-play-state: paused;
+}
+
+/*Botón de reset*/
+.resetCount {
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Bruno Ace', cursive;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(2, 156, 2);
+    /* backdrop-filter: blur(200px); */
+    position: absolute;
+    right: calc(100% / 2 - 60px);
+    bottom: 10px;
+    z-index: 10;
 }
